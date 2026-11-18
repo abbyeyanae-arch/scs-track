@@ -1,15 +1,8 @@
-# How-to card -- SCS3.1 (my own words, as the console was on the day)
+User > Admin console > Directory > Users > Add new user
+Group > Admin console > Directory > Groups > Create group
+Unit > Admin console > Directory > Organizational units > Add OU
+Role > Admin console > Account > Admin roles > Assign role
+Reset > Admin console > Directory > Users > Reset password
+Rollback > Admin console > Directory > Users > Restore user
 
-Six paths.  Write each one as the console showed it today, with ">" between the steps -- not as a tool said it.
-
-User:
-Group:
-Unit:
-Role:
-Reset:
-Rollback:
-
-## AI receipts
-
-One line per AI look-up, each starting "AI receipt:" -- the tool, the date, what I asked, what it said, what the
-real console showed, what was different.  Never a user list, an address, a password or the domain name in the ask.
+AI receipt: tool=Gemini, date=2026-11-17, ask=How to navigate to user creation, answer=Directory > Users, console showed=Directory > Users menu, what was different=Exact button label matched.

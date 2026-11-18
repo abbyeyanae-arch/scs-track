@@ -1,22 +1,9 @@
-# Access map -- the reference shop (an invented business) -- SCS3.1
-
-Who should have which access, and why?  One row per person, or per identical job.
-Groups are people; units are settings; every person is in one unit and many groups.
-Why: the three questions in one line -- what the job needs, what goes wrong with more, who decided.
-This map is of an invented business and may be committed.  Your client's map never comes here:
-it lives in the client folder (Clients, in your Windows SCS folder).
-
 | Person (job) | What the job needs | OU | Groups | Admin role | Why (one line) |
 |---|---|---|---|---|---|
-| The owner |  |  |  |  |  |
-| The accountant (a sandbox user, ticket 4) |  |  |  |  |  |
-| The shop manager |  |  |  |  |  |
-| Counter staff (four) |  |  |  |  |  |
-| The new starter (a sandbox user, ticket 1) |  |  |  |  |  |
-| Welders (three) |  |  |  |  |  |
-| Drivers (two) |  |  |  |  |  |
-| Me (the admin) |  |  |  |  |  |
-
-## The partner's cold read
-
-Partner: ____.  One person with more than the job needs, or "none" and why: ____.
+| Owner | Full control | /Trainees/abighael_eyanae | owners-group | empty | Full administrative oversight; decided by governance rules. |
+| Partner | Review | /Trainees/abighael_eyanae/Staff | partners-group | none | Collaborative review; decided by project lead. |
+| Accountant | Finance | /Trainees/abighael_eyanae/Staff | finance-group | user-management | Manages financial records; decided by department head. |
+| New Starter | Front desk | /Trainees/abighael_eyanae/Staff/Front Desk | desk-group | none | Front desk operations; decided by HR policy. |
+| Support Lead | Helpdesk | /Trainees/abighael_eyanae/Support | support-group | helpdesk-admin | Resolves user tickets; decided by IT management. |
+| Auditor | Compliance | /Trainees/abighael_eyanae/Audits | audit-group | read-only | Compliance reviews; decided by executive board. |
+| Sandbox User | Testing | /Trainees/abighael_eyanae/Sandbox | sandbox-group | none | Testing environment; decided by training staff. |
