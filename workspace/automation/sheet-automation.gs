@@ -31,9 +31,9 @@ function generateMonthlyReport(){
   const monthName = new Date (reportYear, reportMonth).
   toLocaleTimeString("en",{month: "long"});
 
-  const monthLabel = '${monthname} ${reportyear}';
+  const monthLabel = `${monthName} ${reportYear}`;
 
-  const monthlySales = data.filter(row => row[0] && typeof row[0].getmonth ===
+  const monthlySales = data.filter(row => row[0] && typeof row[0].getMonth ===
   "function" && row[0].getMonth()===reportMonth && row[0].getFullYear()
   === reportYear && row[2]==="OUT");
 
