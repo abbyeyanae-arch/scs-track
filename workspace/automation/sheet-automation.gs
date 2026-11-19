@@ -1,3 +1,5 @@
+/** @OnlyCurrentDoc */
+// AI-assisted, directed by abighael_eyanae
 function checkStock(){
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const dashboard = ss.getSheetByName("DASHBOARD")

@@ -1,6 +1,6 @@
 # Reading log -- SCS3.5
 
-Script: workspace/automation/<name>.gs
+Script: workspace/automation/<kiosk back office>.gs
 Read to the last line before the first run: yes / no
 Label: AI-assisted, directed by abighael_eyanae
 
