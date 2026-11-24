@@ -9,7 +9,7 @@ page you read and the date you read it.  One section per piece; add a new piece 
 ### Auth
 Looked for: Hardcoded API keys, secrets, or tokens in send-sms.js and reorder.js.
 Found: Hardcoded gateway API key `<REDACTED-SMS-KEY>` written directly in `workspace/stock-tools/send-sms.js` line 9.
-Evidence: `grep -n "SMS_API_KEY" workspace/stock-tools/send-sms.js` -> `9:const SMS_API_KEY = "<REDACTED-SMS-KEY>";`
+Evidence: `grep -n "SMS_ENV_KEY" workspace/stock-tools/send-sms.js` -> `9:const SMS_ENV_KEY = "<REDACTED-SMS-KEY>";`
 
 ### Edge cases
 Ugly inputs, written before trying them: Exact reorder boundary (`In stock` equal to `Reorder at`), blank stock cell, and quoted item names containing commas.
@@ -26,7 +26,7 @@ Looked for: Non-existent Node core modules or invented functions imported in `re
 Found: `workspace/stock-tools/send-sms.js` line 5 imports `{ fetchWithRetry } = require("node:http")`, which does not exist in Node's `node:http` module (`undefined` at runtime).
 Evidence: `node -e 'console.log(typeof require("node:http").fetchWithRetry)'` -> `undefined` (from `send-sms.js:5`).
 
-The one to fix first, and why: Remove the hardcoded `SMS_API_KEY` from `send-sms.js` (Auth) and replace `fetchWithRetry` (Invented library) immediately so credentials are not exposed and SMS sending does not crash at runtime, then fix the `<=` reorder boundary in `reorder.js`.
+The one to fix first, and why: Remove the hardcoded `SMS_ENV_KEY` from `send-sms.js` (Auth) and replace `fetchWithRetry` (Invented library) immediately so credentials are not exposed and SMS sending does not crash at runtime, then fix the `<=` reorder boundary in `reorder.js`.
 
 ## Piece 2: my own SCS3.5 script
 
