@@ -8,8 +8,8 @@ page you read and the date you read it.  One section per piece; add a new piece 
 
 ### Auth
 Looked for: Hardcoded API keys, secrets, or tokens in send-sms.js and reorder.js.
-Found: Hardcoded gateway API key `LLDEMO-SMS-5c1e9a07d2b84f63` written directly in `workspace/stock-tools/send-sms.js` line 9.
-Evidence: `grep -n "SMS_API_KEY" workspace/stock-tools/send-sms.js` -> `9:const SMS_API_KEY = "LLDEMO-SMS-5c1e9a07d2b84f63";`
+Found: Hardcoded gateway API key `<REDACTED-SMS-KEY>` written directly in `workspace/stock-tools/send-sms.js` line 9.
+Evidence: `grep -n "SMS_API_KEY" workspace/stock-tools/send-sms.js` -> `9:const SMS_API_KEY = "<REDACTED-SMS-KEY>";`
 
 ### Edge cases
 Ugly inputs, written before trying them: Exact reorder boundary (`In stock` equal to `Reorder at`), blank stock cell, and quoted item names containing commas.
