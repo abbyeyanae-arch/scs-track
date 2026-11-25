@@ -36,7 +36,7 @@ Fixed by: Switched interface back to automatic DHCP.
 Put back: Confirmed DHCP lease and lab device reset.
 Proved on the lab device: Rungs 1 through 4 passed after fix.
 Card number: 27
-Sealed log fingerprint:
+Sealed log fingerprint: 0aa4ab3c265d
 
 | Step | What I changed | What changed |
 | :--- | :--- | :--- |
